@@ -390,7 +390,7 @@ body {
     background: #ffffff;
     position: relative;
     overflow: hidden;
-    padding: 55px 0 70px;
+    padding: 55px 0px 70px;
     color: #080808;
 }
 
@@ -429,7 +429,8 @@ body {
 }
 
 .about .img1 {
-    width: 370px;
+    background: url(../assets/images/about-img1.png);
+    /* width: 200px; */
     height: 550px;
     position: relative;
     overflow: hidden;
@@ -537,10 +538,10 @@ body {
     content: "";
     position: absolute;
     width: 43px;
-    height: 4px;
-    background: #111111;
-    left: 4px;
-    top: 29px;
+        height: 4px;
+        background: #111111;
+        left: 8.5px;
+        top: 39.5px;
     transform: rotate(-45deg);
     transform-origin: left center;
 }
@@ -614,7 +615,7 @@ body {
 }
 
 .about .hero-btn::before {
-    content: "Learn More";
+    content: "Learn Here";
     color: #ffffff;
     font-size: 19px;
     font-weight: 700;
@@ -626,13 +627,33 @@ body {
     height: 50px;
     border-radius: 50%;
     background: #ffffff;
-    color: #5231df;
+    color: #9887e2;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
     font-weight: 400;
     line-height: 1;
+}
+
+.hero-btn:hover::after{
+    transition: 0.3s ease-in-out;
+    color: #3315bb;
+    font-weight: 900;
+    transform: rotate(45deg);
+    transform-origin: center;
+    animation: trigger 0.09s linear infinite alternate;
+}
+
+@keyframes trigger{
+    from{
+        filter: drop-shadow(2px 2px 100px rgb(18, 248, 18));
+        transform: rotate(0deg) skew(2deg);
+    }
+    to{
+        filter: drop-shadow(-2px -2px 20px lightgreen);
+        transform: rotate(90deg);
+    }
 }
 
 .about .hero-btn:hover {
@@ -651,7 +672,19 @@ body {
     z-index: 2;
 }
 
+.about .about-shape{
+    /* position: absolute; */
+        width: 220px;
+        right: 70%;
+        bottom: 50px;
+        opacity: 0.8;
+        filter: drop-shadow(0px 0px 10px rgb(248, 244, 19));
+        background-color: transparent;
+        animation: float 4s linear infinite alternate;
+}
+
 .about .img2 {
+    background: url(../assets/images/about-img2.png);
     width: 275px;
     height: 440px;
     position: relative;
@@ -1170,10 +1203,10 @@ body {
 
 .skill-list {
     grid-template-columns: repeat(4, 1fr);
-    background-color: #f2d5d5;
+    /* background-color: #f2d5d5; */
     padding: 20px;
     padding-top: 30px;
-    box-shadow: inset 0px 0px 140px #ef9e9e;
+    /* box-shadow: inset 0px 0px 140px #ef9e9e; */
     border-radius: 20px;
 }
 
